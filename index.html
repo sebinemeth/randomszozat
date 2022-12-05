@@ -6,17 +6,26 @@
 </head>
 <script>
 const wordUrl = "https://raw.githubusercontent.com/mdanka/szozat/main/src/constants/hungarian-puzzles.json"
+let wordList = []
 
 var client = new XMLHttpRequest();
 client.open('GET', wordUrl);
 client.onreadystatechange = function() {
-  console.log(JSON.parse(client.responseText));
+  wordList = JSON.parse(client.responseText);
 }
 client.send();
+
+function generateLink() {
+    if (!wordList.length) {
+        console.error('words not loaded')
+        return
+    }
+    console.log(wordList)
+}
 </script>
 
 <body>
-    <button>generate</button>
+    <button onclick="generateLink">generate</button>
 </body>
 
 </html>
