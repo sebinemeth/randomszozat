@@ -1,9 +1,22 @@
 <!doctype html>
 <html>
+
 <head>
-<title>randomszozat</title>
+    <title>randomszozat</title>
 </head>
+<script>
+const wordUrl = "https://raw.githubusercontent.com/mdanka/szozat/main/src/constants/hungarian-puzzles.json"
+
+var client = new XMLHttpRequest();
+client.open('GET', wordUrl);
+client.onreadystatechange = function() {
+  alert(client.responseText);
+}
+client.send();
+</script>
+
 <body>
-<button>generate</button>
+    <button>generate</button>
 </body>
+
 </html>
