@@ -29,7 +29,7 @@
     console.log(wordList)
     const randomElement = wordList[Math.floor(Math.random() * wordList.length)];
     const div = document.createElement("div")
-    div.innerHTML = "".join(randomElement)
+    div.innerHTML = randomElement.join("")
     document.body.append(div)
   }
 </script>
