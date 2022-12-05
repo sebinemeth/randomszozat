@@ -29,7 +29,8 @@
     console.log(wordList)
     const randomElement = wordList[Math.floor(Math.random() * wordList.length)];
     const div = document.createElement("div")
-    div.innerHTML = randomElement.join("")
+    wordString = randomElement.join("")
+    div.innerHTML = `https://szozat.miklosdanka.com/#s=${encodeURI(btoa(wordString + " generated"))}` + wordString
     document.body.append(div)
   }
 </script>
