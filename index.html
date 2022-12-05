@@ -10,7 +10,7 @@ const wordUrl = "https://raw.githubusercontent.com/mdanka/szozat/main/src/consta
 var client = new XMLHttpRequest();
 client.open('GET', wordUrl);
 client.onreadystatechange = function() {
-  alert(client.responseText);
+  console.log(client.responseText);
 }
 client.send();
 </script>
